@@ -21,7 +21,8 @@ const App = () => {
       >
         <Button
           type="icon"
-          href="https://img1.imgtp.com/2023/06/06/fnnGZFJf.svg"
+          src="https://img1.imgtp.com/2023/06/06/fnnGZFJf.svg"
+          href="https://github.com/realloon/lumina-design"
         />
       </Header>
 

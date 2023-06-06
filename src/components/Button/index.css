@@ -1,0 +1,46 @@
+.lumina-button {
+  color: #000000e0;
+  background-color: #ffffff;
+  font-size: 1rem;
+  font-family: inherit;
+  line-height: 1.5;
+  padding: 0.25em 1em;
+  border-radius: 6px;
+  border: 1px solid #d9d9d9;
+  box-shadow: 0 2px 1px #00000008;
+  outline: none;
+  cursor: pointer;
+  appearance: none;
+  transition: all 0.2s cubic-bezier(0.645, 0.045, 0.355, 1);
+}
+
+.lumina-button-default:hover {
+  color: var(--primary-color);
+  border-color: var(--primary-color);
+}
+
+.lumina-button-text,
+.lumina-button-link {
+  background-color: transparent;
+  border: none;
+  box-shadow: none;
+}
+.lumina-button-text:hover {
+  background-color: #f0f0f0;
+}
+
+.lumina-button-link {
+  color: var(--primary-color);
+}
+.lumina-button-link:hover {
+  opacity: 0.8;
+}
+.lumina-button-link:active {
+  opacity: 1;
+}
+
+.lumina-button-icon {
+  border: none;
+  padding: 0;
+  border-radius: 50%;
+}

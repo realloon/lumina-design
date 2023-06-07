@@ -1,10 +1,10 @@
 import './App.css'
 //
 import logo from 'icons/logo.svg'
-//
+// component
 import { Routes, Route } from 'react-router-dom'
 import { Button, Header } from './components'
-//
+// View
 import Home from 'pages/Home'
 import Document from 'pages/Document'
 

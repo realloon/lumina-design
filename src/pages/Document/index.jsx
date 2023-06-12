@@ -1,5 +1,5 @@
 import logo from 'icons/logo.svg'
-import { Typography, CodeSpace, Button, Header } from 'components'
+import { Typography, CodeSpace, Button, Header, Card, Input } from 'components'
 import { useEffect } from 'react'
 
 const Document = () => {
@@ -18,6 +18,10 @@ const Document = () => {
         </Typography>
       </CodeSpace>
 
+      <CodeSpace title="表单控件">
+        <Input type="text" placeholder="提示内容" />
+      </CodeSpace>
+
       <CodeSpace title="按钮">
         <Button>默认按钮</Button>
         <Button type="text">文字按钮</Button>
@@ -26,6 +30,14 @@ const Document = () => {
           type="icon"
           href="https://img1.imgtp.com/2023/06/06/fnnGZFJf.svg"
         />
+      </CodeSpace>
+
+      <CodeSpace title="卡片">
+        <Card title="Card" extra={<a href="#卡片">More</a>}>
+          <p>Content</p>
+          <p>Content</p>
+          <p>Content</p>
+        </Card>
       </CodeSpace>
 
       <CodeSpace title="顶栏">

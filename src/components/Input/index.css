@@ -1,0 +1,39 @@
+.lumina-input-wrapper {
+  position: relative;
+
+  & .lumina-input-placeholder {
+    color: #999;
+    line-height: 1;
+    position: absolute;
+    top: 0.25rem;
+    left: 0.75rem;
+    padding: 0.25em;
+    background-color: #fff;
+    transition: 0.2s;
+  }
+  /* placeholder 挂起状态 */
+  &:has(.lumina-input:focus) .lumina-input-placeholder {
+    font-size: 0.6rem;
+    top: -0.5rem;
+    left: 1rem;
+    color: var(--primary-color);
+  }
+
+  &:has(.lumina-input[value]) .lumina-input-placeholder {
+    display: none;
+  }
+
+  & .lumina-input {
+    font-size: 1rem;
+    font-family: monospace;
+    line-height: 1.5;
+    padding: 0.25em 1em;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    transition: 0.4s;
+
+    &:hover {
+      border-color: var(--primary-color);
+    }
+  }
+}

@@ -1,0 +1,31 @@
+.lumina-card {
+  display: flex;
+  flex-direction: column;
+  min-width: 16rem;
+  padding: 16px;
+  border-radius: 8px;
+  box-shadow: 0 2px 12px 2px #00000016;
+
+  & .lumina-card-header {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 -16px;
+    padding: 0 16px 16px;
+    border-bottom: 1px solid #eee;
+  }
+
+  & .lumina-card-title {
+    font-weight: bold;
+  }
+
+  & .lumina-card-extra {
+    & a {
+      color: var(--primary-color);
+      text-decoration: none;
+    }
+  }
+
+  & .lumina-card-content {
+    margin-top: 16px;
+  }
+}

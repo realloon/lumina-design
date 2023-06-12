@@ -1,7 +1,11 @@
 import './index.css'
 
-const Typography = ({ children }) => {
-  return <article className="lumina-typography">{children}</article>
+const Typography = ({ children, ...rest }) => {
+  return (
+    <article className="lumina-typography" {...rest}>
+      {children}
+    </article>
+  )
 }
 
 export default Typography

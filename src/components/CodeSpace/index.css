@@ -21,6 +21,8 @@
 }
 
 .lumina-code-space-demo {
+  display: flex;
+  gap: 8px;
   border: 2px dashed #999;
   padding: 16px;
 }

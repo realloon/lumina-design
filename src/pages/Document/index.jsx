@@ -1,4 +1,5 @@
-import { Typography, CodeSpace, Button } from 'components'
+import logo from 'icons/logo.svg'
+import { Typography, CodeSpace, Button, Header } from 'components'
 import { useEffect } from 'react'
 
 const Document = () => {
@@ -7,11 +8,15 @@ const Document = () => {
   }, [])
 
   return (
-    <Typography>
-      <h1>Deocument | Component Demo</h1>
-      <p>
-        我们认为段落中的一行最大宽度应该被限制，过宽的行容易阅读疲劳。我们认为段落中的一行最大宽度应该被限制，过宽的行容易阅读疲劳。我们认为段落中的一行最大宽度应该被限制，过宽的行容易阅读疲劳。我们认为段落中的一行最大宽度应该被限制，过宽的行容易阅读疲劳。
-      </p>
+    <div>
+      <CodeSpace title="排版">
+        <Typography>
+          <h1>Deocument | Component Demo</h1>
+          <p>
+            我们认为段落中的一行最大宽度应该被限制，过宽的行容易阅读疲劳。我们认为段落中的一行最大宽度应该被限制，过宽的行容易阅读疲劳。我们认为段落中的一行最大宽度应该被限制，过宽的行容易阅读疲劳。我们认为段落中的一行最大宽度应该被限制，过宽的行容易阅读疲劳。
+          </p>
+        </Typography>
+      </CodeSpace>
 
       <CodeSpace title="按钮">
         <Button>默认按钮</Button>
@@ -22,7 +27,13 @@ const Document = () => {
           href="https://img1.imgtp.com/2023/06/06/fnnGZFJf.svg"
         />
       </CodeSpace>
-    </Typography>
+
+      <CodeSpace title="顶栏">
+        <Header title="Title" logo={logo}>
+          Children Content
+        </Header>
+      </CodeSpace>
+    </div>
   )
 }
 

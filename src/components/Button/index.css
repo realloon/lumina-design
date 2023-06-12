@@ -14,9 +14,11 @@
   transition: all 0.2s cubic-bezier(0.645, 0.045, 0.355, 1);
 }
 
-.lumina-button-default:hover {
-  color: var(--primary-color);
-  border-color: var(--primary-color);
+.lumina-button-default {
+  &:hover {
+    color: var(--primary-color);
+    border-color: var(--primary-color);
+  }
 }
 
 .lumina-button-text,
@@ -25,18 +27,27 @@
   border: none;
   box-shadow: none;
 }
-.lumina-button-text:hover {
-  background-color: #f0f0f0;
+
+.lumina-button-text {
+  &:hover {
+    background-color: #f0f0f0;
+  }
+  
+  &:active {
+    background-color: transparent;
+  }
 }
 
 .lumina-button-link {
   color: var(--primary-color);
-}
-.lumina-button-link:hover {
-  opacity: 0.8;
-}
-.lumina-button-link:active {
-  opacity: 1;
+
+  &:hover {
+    opacity: 0.8;
+  }
+
+  &:active {
+    opacity: 1;
+  }
 }
 
 .lumina-button-icon {

@@ -1,0 +1,12 @@
+.lumina-table {
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+
+  & th {
+    padding: 0 1em 0 0;
+    
+    &:last-child {
+      padding-right: 0;
+    }
+  }
+}

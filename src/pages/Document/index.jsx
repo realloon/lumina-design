@@ -1,5 +1,13 @@
 import logo from 'icons/logo.svg'
-import { Typography, CodeSpace, Button, Header, Card, Input } from 'components'
+import {
+  Typography,
+  CodeSpace,
+  Button,
+  Header,
+  Card,
+  Input,
+  Table,
+} from 'components'
 import { useEffect } from 'react'
 
 const Document = () => {
@@ -16,6 +24,10 @@ const Document = () => {
             我们认为段落中的一行最大宽度应该被限制，过宽的行容易阅读疲劳。我们认为段落中的一行最大宽度应该被限制，过宽的行容易阅读疲劳。我们认为段落中的一行最大宽度应该被限制，过宽的行容易阅读疲劳。我们认为段落中的一行最大宽度应该被限制，过宽的行容易阅读疲劳。
           </p>
         </Typography>
+      </CodeSpace>
+
+      <CodeSpace title="表格">
+        <Table></Table>
       </CodeSpace>
 
       <CodeSpace title="表单控件">

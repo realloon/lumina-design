@@ -5,35 +5,83 @@
     color: #999;
     line-height: 1;
     position: absolute;
-    top: 0.25rem;
-    left: 0.75rem;
-    padding: 0.25em;
+    top: 0.65rem;
+    left: 0.5rem;
+    padding: 0 0.5em;
     background-color: #fff;
     transition: 0.2s;
-  }
-  /* placeholder 挂起状态 */
-  &:has(.lumina-input:focus) .lumina-input-placeholder {
-    font-size: 0.6rem;
-    top: -0.5rem;
-    left: 1rem;
-    color: var(--primary-color);
+    user-select: none;
+    cursor: text;
   }
 
-  &:has(.lumina-input[value]) .lumina-input-placeholder {
-    display: none;
+  /* placeholder 挂起状态 */
+  &:has(.lumina-input:focus) .lumina-input-placeholder,
+  &:has(.lumina-input:not(:placeholder-shown)) .lumina-input-placeholder {
+    font-size: 0.6rem;
+    top: -0.35rem;
+    left: 0.85rem;
+  }
+
+  &:has(.lumina-input:focus) .lumina-input-placeholder {
+    color: var(--primary-color);
   }
 
   & .lumina-input {
     font-size: 1rem;
-    font-family: monospace;
+    font-family: inherit;
     line-height: 1.5;
-    padding: 0.25em 1em;
+    padding: 0.25em 0 0.25em 1em;
     border: 2px solid #ccc;
+    outline: none;
+    text-overflow: ellipsis;
     border-radius: 4px;
     transition: 0.4s;
 
-    &:hover {
+    &:hover,
+    &:focus {
       border-color: var(--primary-color);
+    }
+
+    &:has(:hover) input {
+      display: none;
+    }
+  }
+
+  /* 开关 */
+  & .lumina-switch {
+    position: relative;
+    display: inline-block;
+    width: 48px;
+    height: 24px;
+    border-radius: 12px;
+    background-color: #ccc;
+    cursor: pointer;
+    transition: 0.2s;
+
+    &::after {
+      content: '';
+      position: absolute;
+      top: 2px;
+      left: 2px;
+      display: inline-block;
+      width: 20px;
+      height: 20px;
+      border-radius: 10px;
+      box-shadow: 0 0 4px 1px #00000008;
+      background-color: #fff;
+      transition: 0.2s;
+    }
+
+    &:has(input:checked) {
+      background-color: var(--primary-color);
+    }
+
+    &:has(input:checked)::after {
+      left: 26px;
+    }
+
+    & input {
+      display: none;
     }
   }
 }

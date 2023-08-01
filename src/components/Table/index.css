@@ -1,12 +1,40 @@
 .lumina-table {
-  padding: 0.5rem;
-  border: 1px solid #ccc;
+  border-collapse: collapse;
+  border: 2px solid #ccc;
+
+  & caption {
+    margin-bottom: 0.25em;
+    font-weight: bold;
+  }
+
+  & th,
+  & td {
+    padding: 0.375em 1em 0.375em 0.5em;
+    line-height: 1;
+
+    &:last-child {
+      padding-right: 0.5em;
+    }
+  }
+
+  & tr {
+    border-bottom: 1px solid #ccc;
+  }
+
+  & tbody &:last-child {
+    border-bottom-style: none;
+  }
 
   & th {
-    padding: 0 1em 0 0;
-    
-    &:last-child {
-      padding-right: 0;
-    }
+    background-color: hsl(0, 0%, 90%);
+    text-align: left;
+  }
+
+  & tbody tr:hover {
+    background-color: hsl(0, 0%, 88%);
+  }
+
+  & td[data-type='number'] {
+    text-align: right;
   }
 }

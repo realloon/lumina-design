@@ -1,7 +1,12 @@
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 16px;
+}
+
 body {
   --primary-color: #7c5aeb;
   margin: 0;
-  font-family: 'LXGW WenKai Screen';
+  background-color: #efefef;
 }
 
 main {

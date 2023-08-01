@@ -1,6 +1,6 @@
 import './App.css'
 //
-import logo from 'icons/logo.svg'
+import logo from 'assets/icons/logo.svg'
 // component
 import { Routes, Route } from 'react-router-dom'
 import { Button, Header } from './components'

@@ -1,4 +1,4 @@
-import logo from 'icons/logo.svg'
+import logo from 'assets/icons/logo.svg'
 import {
   Typography,
   CodeSpace,
@@ -10,6 +10,24 @@ import {
 } from 'components'
 import { useEffect } from 'react'
 
+const tableMock = [
+  {
+    name: '李真',
+    age: 22,
+    sex: 'male',
+  },
+  {
+    name: '李思琪',
+    age: 21,
+    sex: 'female',
+  },
+  {
+    name: '唐莘洁',
+    age: 22,
+    sex: 'female',
+  },
+]
+
 const Document = () => {
   useEffect(() => {
     document.title = 'Lumina Design | Deocument'
@@ -19,7 +37,7 @@ const Document = () => {
     <div>
       <CodeSpace title="排版">
         <Typography>
-          <h1>Deocument | Component Demo</h1>
+          <h1>文档</h1>
           <p>
             我们认为段落中的一行最大宽度应该被限制，过宽的行容易阅读疲劳。我们认为段落中的一行最大宽度应该被限制，过宽的行容易阅读疲劳。我们认为段落中的一行最大宽度应该被限制，过宽的行容易阅读疲劳。我们认为段落中的一行最大宽度应该被限制，过宽的行容易阅读疲劳。
           </p>
@@ -27,7 +45,7 @@ const Document = () => {
       </CodeSpace>
 
       <CodeSpace title="表格">
-        <Table></Table>
+        <Table value={tableMock} title="模拟数据"></Table>
       </CodeSpace>
 
       <CodeSpace title="表单控件">

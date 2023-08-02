@@ -1,28 +1,16 @@
-/* .lumina-code-space {
-} */
+.lumina-code-space {
+  margin: 16px 0;
+}
 
 .lumina-code-space-title {
-  margin: 1rem 0;
-  position: relative;
-}
-
-.lumina-code-space-link {
-  content: '#';
-  color: #aaa;
-  text-decoration: none;
-  position: absolute;
-  left: -0.75em;
-  padding-right: 0.25em;
-  opacity: 0;
-  appearance: none;
-}
-.lumina-code-space-title:hover > .lumina-code-space-link {
-  opacity: 1;
+  font-size: 1.75rem;
+  margin: 0 0 16px;
 }
 
 .lumina-code-space-demo {
-  display: flex;
-  gap: 8px;
   border: 2px dashed #999;
   padding: 16px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
 }

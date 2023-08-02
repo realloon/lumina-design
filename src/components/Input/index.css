@@ -1,87 +1,55 @@
-.lumina-input-wrapper {
-  position: relative;
+.lumina-input {
+  font-size: 16px;
+  padding: 12px 14px;
+  border-radius: 8px;
+  outline: none;
+  border: none;
+  box-shadow: 0 1px 1px 0 #00000008;
+  transition: 0.4s;
 
-  & .lumina-input-placeholder {
-    color: #999;
-    line-height: 1;
+  &:hover,
+  &:focus {
+    box-shadow: 0 6px 16px 8px #00000008;
+  }
+  &:active {
+    box-shadow: 0 1px 3px 2px #00000008;
+  }
+}
+
+/* 开关 */
+.lumina-switch {
+  position: relative;
+  display: inline-block;
+  width: 48px;
+  height: 24px;
+  border-radius: 12px;
+  background-color: #ccc;
+  cursor: pointer;
+  transition: 0.2s;
+
+  &::after {
+    content: '';
     position: absolute;
-    top: 0.65rem;
-    left: 0.5rem;
-    padding: 0 0.5em;
+    top: 2px;
+    left: 2px;
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 4px 1px #00000008;
     background-color: #fff;
     transition: 0.2s;
-    user-select: none;
-    cursor: text;
   }
 
-  /* placeholder 挂起状态 */
-  &:has(.lumina-input:focus) .lumina-input-placeholder,
-  &:has(.lumina-input:not(:placeholder-shown)) .lumina-input-placeholder {
-    font-size: 0.6rem;
-    top: -0.35rem;
-    left: 0.85rem;
+  &:has(input:checked) {
+    background-color: var(--primary-color);
   }
 
-  &:has(.lumina-input:focus) .lumina-input-placeholder {
-    color: var(--primary-color);
+  &:has(input:checked)::after {
+    left: 26px;
   }
 
-  & .lumina-input {
-    font-size: 1rem;
-    font-family: inherit;
-    line-height: 1.5;
-    padding: 0.25em 0 0.25em 1em;
-    border: 2px solid #ccc;
-    outline: none;
-    text-overflow: ellipsis;
-    border-radius: 4px;
-    transition: 0.4s;
-
-    &:hover,
-    &:focus {
-      border-color: var(--primary-color);
-    }
-
-    &:has(:hover) input {
-      display: none;
-    }
-  }
-
-  /* 开关 */
-  & .lumina-switch {
-    position: relative;
-    display: inline-block;
-    width: 48px;
-    height: 24px;
-    border-radius: 12px;
-    background-color: #ccc;
-    cursor: pointer;
-    transition: 0.2s;
-
-    &::after {
-      content: '';
-      position: absolute;
-      top: 2px;
-      left: 2px;
-      display: inline-block;
-      width: 20px;
-      height: 20px;
-      border-radius: 10px;
-      box-shadow: 0 0 4px 1px #00000008;
-      background-color: #fff;
-      transition: 0.2s;
-    }
-
-    &:has(input:checked) {
-      background-color: var(--primary-color);
-    }
-
-    &:has(input:checked)::after {
-      left: 26px;
-    }
-
-    & input {
-      display: none;
-    }
+  & input {
+    display: none;
   }
 }
